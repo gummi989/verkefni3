@@ -18,21 +18,21 @@ def a():
 
     <h2<verkefni 3</h1>
 
-    <a href="/sida/1">LiðurA</a>
+    <p><a href="/sida/1">LiðurA</a><p>
 
-    <a href="/sida/2">LiðurB</a>
+    <p><a href="/sida/2">LiðurB</a><p>
 
     
 
     """
 
-@route("/sida/<id>")
+@route("/a")
 def index():
     return template("temp-A.tpl")
 
 
 @route("/page1")
-def page(id):
+def page(kt):
     return template("temp-A.tpl")
 @route("/sida/<kt<")
 def page(kt):
