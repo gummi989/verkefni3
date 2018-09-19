@@ -1,4 +1,5 @@
 
+from sys import argv
 
 from bottle import*
 
@@ -39,11 +40,12 @@ def index():
 def index(id):
         # id vísar á þann undirlista sem við notum í template
         # búum til lýsandi breytur fyrir template (skýrara)
-        return template("frett.tpl", fyrirsogn=frettir[id][0], frett=frettir[id][1], mynd = frettir[id][2], hofundur=frettir[id][3])
+        #return template("frett.tpl", fyrirsogn=frettir[id][0], frett=frettir[id][1], mynd = frettir[id][2], hofundur=frettir[id][3])
 
             # Það hefði líka verið hægt að vísa í lista úr template
-            # return template("frett.tpl", frett=frettir[id])
+            return template("frett.tpl", frett=frettir[id])
 
-#run(host='localhost',port=8080)
+#run()
 
-run(host='0.0.0.',port=os.environ.get('PORT'))                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+run(host='0.0.0.',port=os.environ.get('PORT'))
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
